@@ -8,6 +8,9 @@ namespace CrackingTheCode6th.Chapter1 {
             IsOneAway ("pales", "pale");
             IsOneAway ("pale", "bale");
             IsOneAway ("pale", "bae");
+            IsOneAway ("ple", "baea");
+            IsOneAway ("ple", "pleple");
+            
         }
 
         private void IsOneAway (string s1, string s2) {
