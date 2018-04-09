@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using CrackingTheCode6th.Chapter1;
 using CrackingTheCode6th.Chapter2;
 using CrackingTheCode6th.Chapter3;
-using CrackingTheCode6th.Others;
+using CrackingTheCode6th.Chapter4;
+using CrackingTheCode6th.DataStructure;
+using CrackingTheCode6th.HackerRank;
+using CrackingTheCode6th.PracticeForRef;
+using CrackingTheCode6th.Sort;
 
 namespace CrackingTheCode6th {
     class Program {
@@ -11,12 +15,34 @@ namespace CrackingTheCode6th {
             IList<Quiz> quizzes = new List<Quiz> ();
             //AddChapter1 (quizzes);
             //AddChapter2 (quizzes);
-            AddChapter3 (quizzes);
-            //AddOthers(quizzes);
+            //AddChapter3 (quizzes);
+            //AddChapter4 (quizzes);
+            
+            AddHackerRank(quizzes);
+            
 
             foreach (Quiz q in quizzes) {
                 q.Run ();
             }
+        }
+
+        private static void AddHackerRank(IList<Quiz> quizzes)
+        {            
+            //quizzes.Add(new JourneytotheMoon());
+            //quizzes.Add(new RoadsandLibraries());
+            quizzes.Add(new BirthdayChocolate());
+            //quizzes.Add(new Euler1());
+            //quizzes.Add(new Euler2());
+            quizzes.Add(new Euler3());
+            
+        }
+
+        private static void AddChapter4 (IList<Quiz> quizzes) {
+            quizzes.Add (new Q4_1 ());
+            quizzes.Add (new Q4_2 ());
+            quizzes.Add (new Q4_3 ());
+            quizzes.Add (new Q4_4 ());
+            quizzes.Add (new Q4_5 ());
         }
 
         private static void AddChapter3 (IList<Quiz> quizzes) {
@@ -50,8 +76,5 @@ namespace CrackingTheCode6th {
             quizzes.Add (new Q1_9 ());
         }
 
-        private static void AddOthers (IList<Quiz> quizzes) {
-            quizzes.Add (new CustomLinkedList ());
-        }
     }
 }

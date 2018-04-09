@@ -1,7 +1,7 @@
 using System;
 
-namespace CrackingTheCode6th.Others {
-    public class CustomLinkedList : Quiz {
+namespace CrackingTheCode6th.DataStructure {
+    public class LinkedList : Quiz {
 
         public override void Test () {
             int count = 0;
@@ -13,7 +13,7 @@ namespace CrackingTheCode6th.Others {
             ShowLinkedList (head);
             DeleteNode (head, "3");
             ShowLinkedList (head);
-            
+
         }
 
         private void DeleteNode (Node head, string v) {
@@ -21,14 +21,14 @@ namespace CrackingTheCode6th.Others {
             while (true) {
                 if (current.val != v) {
                     current = current.next;
-                } else if(current.val==v){
+                } else if (current.val == v) {
                     current.prev.next = current.next;
                     current.next.prev = current.prev;
-                    System.Console.WriteLine("Delete Value "+v);
+                    System.Console.WriteLine ("Delete Value " + v);
                     break;
                 }
-                if(current.next==null){
-                    System.Console.WriteLine("Cannot find Value "+v);
+                if (current.next == null) {
+                    System.Console.WriteLine ("Cannot find Value " + v);
                     break;
                 }
             }
@@ -51,18 +51,18 @@ namespace CrackingTheCode6th.Others {
             }
             current.next = new Node (v, current);
         }
+        private class Node {
+            public Node (string val, Node prev) {
+                this.val = val;
+                this.prev = prev;
+                this.next = null;
+            }
+            public string val { get; set; }
+            public Node next { get; set; }
+            public Node prev { get; set; }
 
-    }
-
-    class Node {
-        public Node (string val, Node prev) {
-            this.val = val;
-            this.prev = prev;
-            this.next = null;
         }
-        public string val { get; set; }
-        public Node next { get; set; }
-        public Node prev { get; set; }
 
     }
+
 }
