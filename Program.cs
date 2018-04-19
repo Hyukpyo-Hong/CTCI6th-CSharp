@@ -16,9 +16,9 @@ namespace CrackingTheCode6th {
             //AddChapter1 (quizzes);
             //AddChapter2 (quizzes);
             //AddChapter3 (quizzes);
-            //AddChapter4 (quizzes);
+            AddChapter4 (quizzes);
             
-            AddHackerRank(quizzes);
+            //AddHackerRank(quizzes);
             
 
             foreach (Quiz q in quizzes) {
@@ -43,6 +43,7 @@ namespace CrackingTheCode6th {
             quizzes.Add (new Q4_3 ());
             quizzes.Add (new Q4_4 ());
             quizzes.Add (new Q4_5 ());
+            quizzes.Add (new Q4_6 ());
         }
 
         private static void AddChapter3 (IList<Quiz> quizzes) {
