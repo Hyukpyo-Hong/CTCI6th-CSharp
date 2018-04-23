@@ -16,9 +16,9 @@ namespace CrackingTheCode6th {
             //AddChapter1 (quizzes);
             //AddChapter2 (quizzes);
             //AddChapter3 (quizzes);
-            AddChapter4 (quizzes);
+            //AddChapter4 (quizzes);
             
-            //AddHackerRank(quizzes);
+            AddHackerRank(quizzes);
             
 
             foreach (Quiz q in quizzes) {
@@ -30,10 +30,12 @@ namespace CrackingTheCode6th {
         {            
             //quizzes.Add(new JourneytotheMoon());
             //quizzes.Add(new RoadsandLibraries());
-            quizzes.Add(new BirthdayChocolate());
-            //quizzes.Add(new Euler1());
-            //quizzes.Add(new Euler2());
+            //quizzes.Add(new BirthdayChocolate());
+            quizzes.Add(new Euler1());
+            quizzes.Add(new Euler2());
             quizzes.Add(new Euler3());
+            quizzes.Add(new Euler4());
+            quizzes.Add(new Euler5());
             
         }
 
