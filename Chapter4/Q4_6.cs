@@ -36,39 +36,53 @@ namespace CrackingTheCode6th.Chapter4 {
             tree.Insert (n);
             tree.Insert (o);
             System.Console.WriteLine ("Input " + a.Value);
-            NextNodeInOrder (a, a);
+            NextNodeInOrder (a);
             System.Console.WriteLine ("Input " + k.Value);
-            NextNodeInOrder (k, k);
+            NextNodeInOrder (k);
             System.Console.WriteLine ("Input " + o.Value);
-            NextNodeInOrder (o, o);
-                        System.Console.WriteLine ("Input " + e.Value);
-            NextNodeInOrder (e, e);
+            NextNodeInOrder (o);
+            System.Console.WriteLine ("Input " + e.Value);
+            NextNodeInOrder (e);
 
         }
 
-        private void NextNodeInOrder (BSTNode node, BSTNode startnode) {
-            //Have right node
-            if (node.Right != null && node.Value >= startnode.Value) {
-                System.Console.WriteLine (node.Right.Value);
+        private void NextNodeInOrder (BSTNode node) {
+            //Has Right Sub Tree
+            if (node.Right != null) {
+                LeftMostNode (node.Right);
+            } else {
+                //No Right Subtree
+                if (node.Parent != null) {
+                    BSTNode temp = node.Parent;
+                    while (node.Value > temp.Value) {
+                        if (temp.Parent == null) {
+                            System.Console.WriteLine ("None");
+                            return;
+                        }
+                        temp = temp.Parent;
+                    }
+                    System.Console.WriteLine (temp.Value);
+                }
+
             }
-            //No
-            else if (node.Parent == null) {
-                System.Console.WriteLine ("None");
-            }
-            //Left Branch
-            else if (node.Value <= node.Parent.Value) {
-                System.Console.WriteLine (node.Parent.Value);
-            }
-            //Right Branch
-            else if (node.Value > node.Parent.Value) {
-                NextNodeInOrder (node.Parent, startnode);
-            }
+
         }
 
-        //                  10
-        //         5                  15
-        //     2       7          12      20
-        // 1      3  6    8     11  14   18  22
+        private void LeftMostNode (BSTNode node) {
+            BSTNode temp = node;
+            while (temp != null) {
+                if (temp.Left == null) {
+                    System.Console.WriteLine (temp.Value);
+                }
+                temp = temp.Left;
+            }
 
+        }
     }
+
+    //                  10
+    //         5                  15
+    //     2       7          12      20
+    // 1      3  6    8     11  14   18  22
+
 }

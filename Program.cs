@@ -44,6 +44,9 @@ namespace CrackingTheCode6th {
             quizzes.Add (new Q4_4 ());
             quizzes.Add (new Q4_5 ());
             quizzes.Add (new Q4_6 ());
+            quizzes.Add (new Q4_7 ());
+            quizzes.Add (new Q4_8 ());
+            quizzes.Add (new Q4_9 ());
         }
 
         private static void AddChapter3 (IList<Quiz> quizzes) {
