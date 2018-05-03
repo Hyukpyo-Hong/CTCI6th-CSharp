@@ -4,6 +4,7 @@ using CrackingTheCode6th.Chapter1;
 using CrackingTheCode6th.Chapter2;
 using CrackingTheCode6th.Chapter3;
 using CrackingTheCode6th.Chapter4;
+using CrackingTheCode6th.Chapter8;
 using CrackingTheCode6th.DataStructure;
 using CrackingTheCode6th.HackerRank;
 using CrackingTheCode6th.PracticeForRef;
@@ -17,26 +18,30 @@ namespace CrackingTheCode6th {
             //AddChapter2 (quizzes);
             //AddChapter3 (quizzes);
             //AddChapter4 (quizzes);
-            
-            AddHackerRank(quizzes);
-            
+            AddChapter8 (quizzes);
+
+            //AddHackerRank(quizzes);
 
             foreach (Quiz q in quizzes) {
                 q.Run ();
             }
         }
 
-        private static void AddHackerRank(IList<Quiz> quizzes)
-        {            
+        private static void AddChapter8 (IList<Quiz> quizzes) {
+            quizzes.Add (new Q8_1 ());
+            quizzes.Add (new Q8_2 ());
+        }
+
+        private static void AddHackerRank (IList<Quiz> quizzes) {
             //quizzes.Add(new JourneytotheMoon());
             //quizzes.Add(new RoadsandLibraries());
             //quizzes.Add(new BirthdayChocolate());
-            quizzes.Add(new Euler1());
-            quizzes.Add(new Euler2());
-            quizzes.Add(new Euler3());
-            quizzes.Add(new Euler4());
-            quizzes.Add(new Euler5());
-            
+            quizzes.Add (new Euler1 ());
+            quizzes.Add (new Euler2 ());
+            quizzes.Add (new Euler3 ());
+            quizzes.Add (new Euler4 ());
+            quizzes.Add (new Euler5 ());
+
         }
 
         private static void AddChapter4 (IList<Quiz> quizzes) {
@@ -49,6 +54,8 @@ namespace CrackingTheCode6th {
             quizzes.Add (new Q4_7 ());
             quizzes.Add (new Q4_8 ());
             quizzes.Add (new Q4_9 ());
+            quizzes.Add (new Q4_10 ());
+            quizzes.Add (new Q4_11 ());
         }
 
         private static void AddChapter3 (IList<Quiz> quizzes) {

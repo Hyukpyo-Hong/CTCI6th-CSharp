@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace CrackingTheCode6th.Chapter4 {
     public class Q4_9 : Quiz {
+        // On Process
         public override void Test () {
             BST bst = new BST ();
             bst.Insert (5);
@@ -39,14 +40,14 @@ namespace CrackingTheCode6th.Chapter4 {
 
         /*
         1)
-            5
-        1       7
+                        5
+                    1       7
 
         2)        
-                      5
-            3                   7
-        1       4           6       9
-                                       11
+                        5
+                3                   7
+            1       4           6       9
+                                        11
 
         */
 
